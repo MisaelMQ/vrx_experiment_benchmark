@@ -30,18 +30,21 @@ The ecosystem relies on an asynchronous ROS 2 architecture spanning specialized 
 graph TD
     A[GPS/IMU] --> B[state_estimator_2d]
     B -->|State & Local Origin| C[route_manager]
-    C -->|Active Waypoint Meta| D[guidance_los \n (or RL/MPPI)]
+    C -->|Active Waypoint Meta| D["guidance_los <br> (or RL/MPPI)"]
     
-    D -->|psi_ref, u_ref| E[controller_pd \n controller_mppi]
-    E -->|thruster_cmd| F[thruster_commander]
-    F -->|left_thrust \n right_thrust| Actuators
+    D -->|psi_ref, u_ref| E["controller_pd <br> controller_mppi"]
+    E -->|thruster_cmd| F["thruster_commander"]
+    F -->|"left_thrust <br> right_thrust"| Actuators
 ```
 
 ### Module Breakdown
 * **`state_estimator_2d`**: High-frequency ENU local frame fusion mapping raw GPS/IMU to 2D Odometry using Exponential Moving Averages (EMA).
 * **`route_manager`**: Stateful milestone tracking managing `start`, `transit`, and `finish` maneuver envelopes. Injects mathematically robust spatial capture tolerances.
+* **`route_utils`**: Core mathematical library parsing geodetic matrices and vectors for safe navigation routing.
 * **`guidance_los`**: Lookahead Adaptive Line-of-Sight steering. Computes curvature-aware geometries linking directly to underlying controllers.
 * **`controller_mppi` / `controller_pd` / `controller_rl_residual`**: Translation solvers spanning basic Proportional-Derivative actuation, nonlinear Model Predictive Path Integrals, and the experimental TD3+BC RL agent.
+* **`train_rl_residual`**: Dedicated Offline TD3+BC policy trainer generating and iterating optimized network parameters.
+* **`thruster_commander`**: Direct bridge translating logical Newton matrices from evaluating controllers securely into gazebo bounds.
 * **`metrics_logger`**: The central evaluation core caching telemetry directly into local `.csv` summary grids.
 
 ---
