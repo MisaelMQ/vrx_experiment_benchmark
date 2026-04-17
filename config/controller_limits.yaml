@@ -1,0 +1,16 @@
+thruster_commander:
+  ros__parameters:
+    # Interface and safety
+    send_positions: true
+    command_timeout_sec: 0.5
+    publish_rate_hz: 20.0
+    
+    # Actuation limits
+    thrust_min: -1000.0
+    thrust_max: 1000.0
+    pos_min: -1.57079632679
+    pos_max: 1.57079632679
+    
+    # Debugging
+    debug_enabled: true
+    debug_interval_sec: 3.0

@@ -1,0 +1,54 @@
+controller_rl_residual:
+  ros__parameters:
+    # Interfaces
+    state_topic: /wamv/navigation/state2d
+    guidance_topic: /wamv/control/guidance_cmd
+    active_waypoint_meta_topic: /wamv/navigation/active_waypoint_meta
+    base_thruster_cmd_topic: /wamv/control/thruster_cmd_raw
+    base_controller_debug_topic: /wamv/control/controller_debug_raw
+    thruster_cmd_topic: /wamv/control/thruster_cmd
+    controller_debug_topic: /wamv/control/controller_debug
+    publish_rate_hz: 20.0
+    fixed_thruster_angle: 0.0
+    debug_enabled: true
+    debug_interval_sec: 1.0
+
+    # Runtime / policy
+    enable_residual: true
+    shadow_mode: false
+    use_learned_policy: true
+    policy_format: torchscript
+    policy_path: mppi_rl_residual_policy.ts
+    policy_device: cpu
+    policy_input_dim: 20
+    policy_hidden_dim: 128
+    alpha_residual: 0.50          # Generic fallback if no specific mode applies
+    # Dynamic alpha config to adjust RL authority per mode (transit: high, hold: conservative, zigzag_diff: high diff thrust)
+    alpha_residual_transit: 0.50
+    alpha_residual_hold: 0.20
+    alpha_residual_zigzag_diff: 0.60
+
+    # Safety / bounds
+    max_residual_common_transit: 120.0
+    max_residual_diff_transit: 150.0
+    max_residual_common_hold: 60.0
+    max_residual_diff_hold: 80.0
+    max_delta_residual_per_step: 40.0
+    max_total_thrust: 1000.0
+    min_total_thrust: -1000.0
+    reverse_thrust_scale: 0.85
+
+    # Heuristic bootstrap residual
+    heuristic_k_cte: 10.0
+    heuristic_k_heading: 65.0
+    heuristic_k_yaw_rate: 28.0
+    heuristic_k_speed_error: 24.0
+    heuristic_finish_brake_gain: 42.0
+    heuristic_finish_dist_thresh: 4.0
+    heuristic_zigzag_gain: 18.0
+
+    # Dataset recording
+    record_dataset: true
+    dataset_output_root: metrics/rl_dataset
+    dataset_tag: mppi_rl
+    dataset_flush_rate_hz: 10.0

@@ -1,0 +1,18 @@
+controller_pd:
+  ros__parameters:
+    # Interfaces
+    publish_rate_hz: 20.0
+    
+    # Heading and speed control gains
+    kp_yaw: 2.3
+    kd_yaw: 5.0
+    surge_gain: 110.0
+    yaw_to_diff_gain: 60.0
+    
+    # Constraints
+    max_thrust: 1000.0
+    fixed_thruster_angle: 0.0
+    
+    # Debugging
+    debug_enabled: true
+    debug_interval_sec: 3.0

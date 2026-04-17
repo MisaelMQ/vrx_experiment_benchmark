@@ -1,0 +1,63 @@
+route_id: route_curves
+frame_id: map_local
+
+waypoints:
+  - id: 0
+    lat: -33.72252041548704
+    lon: 150.6739474751323
+    mode: start
+    pos_tolerance: 3.0
+
+  - id: 1
+    lat: -33.72233313286056
+    lon: 150.6738262922098
+    mode: transit
+    pos_tolerance: 3.0
+
+  - id: 2
+    lat: -33.72210894870531
+    lon: 150.6738001402397
+    mode: transit
+    pos_tolerance: 3.0
+
+  - id: 3
+    lat: -33.72194159305656
+    lon: 150.6739099511679
+    mode: transit
+    pos_tolerance: 3.0
+
+  - id: 4
+    lat: -33.72183847065332
+    lon: 150.6740937715084
+    mode: transit
+    pos_tolerance: 3.0
+
+  - id: 5
+    lat: -33.72174741315254
+    lon: 150.6742983361647
+    mode: transit
+    pos_tolerance: 3.0
+
+  - id: 6
+    lat: -33.72158792561265
+    lon: 150.6744298709
+    mode: transit
+    pos_tolerance: 3.0
+
+  - id: 7
+    lat: -33.72140553487371
+    lon: 150.6744332240912
+    mode: transit
+    pos_tolerance: 3.0
+
+  - id: 8
+    lat: -33.72124086876301
+    lon: 150.6743172291024
+    mode: transit
+    pos_tolerance: 3.0
+
+  - id: 9
+    lat: -33.72115092856124
+    lon: 150.6742727920956
+    mode: finish
+    pos_tolerance: 3.0

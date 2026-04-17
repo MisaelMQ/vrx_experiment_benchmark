@@ -1,0 +1,63 @@
+route_id: route_zigzag
+frame_id: map_local
+
+waypoints:
+  - id: 0
+    lat: -33.72251741876278
+    lon: 150.6739538883498
+    mode: start
+    pos_tolerance: 3.0
+
+  - id: 1
+    lat: -33.72241023310829
+    lon: 150.6740355816623
+    mode: transit
+    pos_tolerance: 3.0
+
+  - id: 2
+    lat: -33.72227797393947
+    lon: 150.6739783851829
+    mode: transit
+    pos_tolerance: 3.0
+
+  - id: 3
+    lat: -33.72217422063118
+    lon: 150.6740813033828
+    mode: transit
+    pos_tolerance: 3.0
+
+  - id: 4
+    lat: -33.722047495444
+    lon: 150.6740259600307
+    mode: transit
+    pos_tolerance: 3.0
+
+  - id: 5
+    lat: -33.72192349562658
+    lon: 150.6741493432641
+    mode: transit
+    pos_tolerance: 3.0
+
+  - id: 6
+    lat: -33.72179733137788
+    lon: 150.6740812823286
+    mode: transit
+    pos_tolerance: 3.0
+
+  - id: 7
+    lat: -33.72167991698331
+    lon: 150.6741968323602
+    mode: transit
+    pos_tolerance: 3.0
+
+  - id: 8
+    lat: -33.72155221152653
+    lon: 150.6741354251062
+    mode: transit
+    pos_tolerance: 3.0
+
+  - id: 9
+    lat: -33.72142274813038
+    lon: 150.6742412040302
+    mode: finish
+    pos_tolerance: 3.0

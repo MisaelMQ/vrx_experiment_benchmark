@@ -1,0 +1,16 @@
+t,event,active_idx,wp_id,mode,dist,proj,hold_elapsed
+15.700,entered_tolerance,0,0,start,2.9810,-0.1691,0.001
+15.700,hold_started,0,0,start,2.9810,-0.1691,0.001
+17.800,exited_tolerance,1,1,transit,18.1676,-0.1116,0.000
+17.800,waypoint_reached,0,1,transit,18.1676,-0.1116,0.000
+25.400,waypoint_reached,1,2,transit,17.5332,-0.1376,0.000
+31.500,waypoint_reached,2,3,transit,17.2693,-0.1784,0.000
+37.400,waypoint_reached,3,4,transit,21.0780,-0.1492,0.000
+44.400,waypoint_reached,4,5,transit,22.6536,-0.1171,0.000
+51.700,waypoint_reached,5,6,transit,22.1459,-0.1388,0.000
+58.800,waypoint_reached,6,7,transit,23.0270,-0.1248,0.000
+66.100,waypoint_reached,7,8,transit,17.3475,-0.1832,0.000
+71.500,waypoint_reached,8,9,finish,23.5893,-0.1429,0.000
+86.000,entered_tolerance,9,9,finish,2.9941,0.8595,0.001
+86.000,hold_started,9,9,finish,2.9941,0.8595,0.001
+89.100,route_completed,9,9,finish,0.0000,0.9119,0.000

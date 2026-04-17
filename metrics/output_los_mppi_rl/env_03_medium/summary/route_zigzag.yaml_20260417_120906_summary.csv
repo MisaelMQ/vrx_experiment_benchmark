@@ -1,0 +1,2 @@
+run_tag,route_name,completed,total_time_sec,distance_travelled_m,straight_line_dist_m,path_efficiency,mean_speed_mps,max_speed_mps,mean_abs_cte_m,rms_cte_m,max_abs_cte_m,waypoints_completed,mean_u_ref,mean_left_thrust,mean_right_thrust
+route_zigzag.yaml_20260417_120906,route_zigzag.yaml_20260417_120906,1,93.400,211.231,150.458,0.7123,2.5305,3.4996,2.6002,4.5691,18.0567,9,2.4480,598.1685,589.9548

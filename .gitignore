@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+.Python
+env/
+venv/
+.venv/
+
+# ROS 2 workspace
+build/
+install/
+log/
+
+# VSCode settings and intelligence databases
+.vscode/browse.vc.db
+.vscode/*.db
+.vscode/*.suo
+.vscode/*.ntvs*
+.vscode/*.njsproj
+.vscode/*.sln
+.vscode/*.sw?
+
+# Local metrics / generated data (Optional, you can change this if you want to push certain CSVs)
+# metrics/

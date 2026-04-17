@@ -1,0 +1,13 @@
+route_manager:
+  ros__parameters:
+    # Waypoint capture timeouts
+    start_hold_sec: 2.0
+    finish_hold_sec: 3.0
+    
+    # Interfaces
+    publish_rate_hz: 10.0
+    
+    # Debugging
+    debug_enabled: true
+    debug_interval_sec: 3.0
+

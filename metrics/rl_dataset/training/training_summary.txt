@@ -1,0 +1,19 @@
+=== Etapa 3 — TD3+BC training summary ===
+algorithm             = TD3+BC
+n_gradient_steps      = 200000
+best_val_bc_loss      = 0.01250982
+gamma                 = 0.99
+tau                   = 0.005
+td3bc_alpha           = 3.0
+lr_actor              = 0.0002
+lr_critic             = 0.0003
+batch_size            = 256
+actor_hidden_dim      = 128
+critic_hidden_dim     = 256
+input_dim             = 20
+reward_cte_weight     = 1.0
+reward_cte_norm       = 2.0
+reward_improve_weight = 0.5
+reward_speed_weight   = 0.15
+reward_action_weight  = 0.05
+train_device          = auto

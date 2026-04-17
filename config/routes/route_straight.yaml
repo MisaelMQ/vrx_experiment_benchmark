@@ -1,0 +1,63 @@
+route_id: route_straight
+frame_id: map_local
+
+waypoints:
+  - id: 0
+    lat: -33.72252784760515
+    lon: 150.6739565151321
+    mode: start
+    pos_tolerance: 3.0
+
+  - id: 1
+    lat: -33.72238429782643
+    lon: 150.6739929169588
+    mode: transit
+    pos_tolerance: 3.0
+
+  - id: 2
+    lat: -33.72225050436163
+    lon: 150.674026087916
+    mode: transit
+    pos_tolerance: 3.0
+
+  - id: 3
+    lat: -33.7221223615599
+    lon: 150.6740550863393
+    mode: transit
+    pos_tolerance: 3.0
+
+  - id: 4
+    lat: -33.72196079071823
+    lon: 150.6740882607502
+    mode: transit
+    pos_tolerance: 3.0
+
+  - id: 5
+    lat: -33.72178305776857
+    lon: 150.6741273406055
+    mode: transit
+    pos_tolerance: 3.0
+
+  - id: 6
+    lat: -33.72161123642586
+    lon: 150.6741650385193
+    mode: transit
+    pos_tolerance: 3.0
+
+  - id: 7
+    lat: -33.72143191558413
+    lon: 150.6742069476423
+    mode: transit
+    pos_tolerance: 3.0
+
+  - id: 8
+    lat: -33.72130344603168
+    lon: 150.6742345136776
+    mode: transit
+    pos_tolerance: 3.0
+
+  - id: 9
+    lat: -33.72112120852503
+    lon: 150.6742753157646
+    mode: finish
+    pos_tolerance: 3.0

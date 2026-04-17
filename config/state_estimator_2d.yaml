@@ -1,0 +1,39 @@
+state_estimator_2d:
+  ros__parameters:
+    # Interfaces
+    gps_topic: /wamv/sensors/gps/gps/fix
+    imu_topic: /wamv/sensors/imu/imu/data
+    output_topic: /wamv/navigation/state2d
+    origin_topic: /wamv/navigation/local_origin
+    debug_topic: /wamv/navigation/debug_state2d
+
+    # Frames
+    local_frame_id: map_local
+    child_frame_id: wamv/base_link_est
+
+    # Origin configuration
+    use_first_gps_as_origin: true
+
+    # Only used if use_first_gps_as_origin = false
+    fixed_origin_lat: 0.0
+    fixed_origin_lon: 0.0
+
+    # High-frequency RTK GPS: direct position estimation
+    position_alpha: 0.85
+    velocity_alpha: 0.20
+    yaw_alpha: 0.12
+
+    # Execution limits and rates
+    publish_rate_hz: 20.0
+    min_dt_for_velocity: 0.02
+    min_speed_for_course_yaw: 0.30
+
+    # Pose covariance
+    pose_cov_x: 0.05
+    pose_cov_y: 0.05
+    pose_cov_yaw: 0.20
+
+    # Twist covariance
+    twist_cov_vx: 0.10
+    twist_cov_vy: 0.10
+    twist_cov_yaw_rate: 0.05

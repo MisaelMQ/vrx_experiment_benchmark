@@ -1,0 +1,2 @@
+run_tag,route_name,completed,total_time_sec,distance_travelled_m,straight_line_dist_m,path_efficiency,mean_speed_mps,max_speed_mps,mean_abs_cte_m,rms_cte_m,max_abs_cte_m,waypoints_completed,mean_u_ref,mean_left_thrust,mean_right_thrust
+route_curves.yaml_20260414_160852,route_curves.yaml_20260414_160852,1,97.300,233.213,180.716,0.7749,2.6981,3.4483,1.4616,2.0224,9.5651,9,3.2216,680.9685,696.5194

@@ -1,0 +1,72 @@
+controller_mppi:
+  ros__parameters:
+    # Interfaces
+    state_topic: /wamv/navigation/state2d
+    guidance_topic: /wamv/control/guidance_cmd
+    active_waypoint_meta_topic: /wamv/navigation/active_waypoint_meta
+    thruster_cmd_topic: /wamv/control/thruster_cmd
+    controller_debug_topic: /wamv/control/controller_debug
+    publish_rate_hz: 20.0
+    fixed_thruster_angle: 0.0
+    debug_enabled: true
+    debug_interval_sec: 3.0
+
+    # MPPI core
+    horizon_steps: 22
+    dt: 0.15
+    num_samples: 256
+    lambda_temp: 13.0
+    sample_smoothing: 0.82
+    noise_sigma_left: 105.0
+    noise_sigma_right: 105.0
+    noise_sigma_left_hold: 30.0
+    noise_sigma_right_hold: 30.0
+    max_delta_thrust_per_step: 110.0
+    warm_start_with_last_cmd: true
+    random_seed: 7
+
+    # Vehicle surrogate model tuned for VRX WAM-V drag (conservative)
+    mass_eff: 260.0
+    iz_eff: 270.0
+    thruster_half_spacing_m: 0.98
+    surge_drag_linear: 100.0
+    surge_drag_quadratic: 150.0
+    yaw_drag_linear: 800.0
+    yaw_drag_quadratic: 800.0
+    surge_accel_limit: 2.5
+    yaw_accel_limit: 2.8
+    prediction_speed_limit: 6.5
+    prediction_yaw_rate_limit: 2.0
+
+    # Constraints
+    min_thrust: -1000.0
+    max_thrust: 1000.0
+    reverse_thrust_scale: 0.85
+    finish_brake_distance: 4.0
+    completion_zero_u_ref: 0.05
+
+    # Transit mode costs
+    w_cte: 32.0
+    w_heading: 20.0
+    w_speed: 8.0
+    w_yaw_rate: 4.5
+    w_progress: 3.0
+    w_wp_distance: 1.0
+    w_control: 0.010
+    w_control_delta: 0.28
+    w_saturation: 42.0
+    w_reverse: 1.6
+    terminal_multiplier: 4.5
+
+    # Start/Finish mode costs
+    w_cte_hold: 14.0
+    w_heading_hold: 28.0
+    w_speed_hold: 18.0
+    w_yaw_rate_hold: 18.0
+    w_progress_hold: 1.0
+    w_wp_distance_hold: 10.0
+    w_control_hold: 0.014
+    w_control_delta_hold: 0.70
+    w_saturation_hold: 70.0
+    w_reverse_hold: 3.0
+    terminal_multiplier_hold: 6.5

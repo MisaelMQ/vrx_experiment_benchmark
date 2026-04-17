@@ -1,0 +1,19 @@
+guidance_los:
+  ros__parameters:
+    # Interfaces
+    publish_rate_hz: 20.0
+    
+    # LOS distance configuration
+    lookahead_min: 6.0
+    lookahead_max: 14.0
+    lookahead_speed_gain: 1.5
+    
+    # Mode-based speed scaling
+    start_speed: 2.5
+    transit_speed: 4.0
+    finish_speed: 1.5
+    slowdown_radius: 5.0
+    
+    # Debugging
+    debug_enabled: true
+    debug_interval_sec: 3.0

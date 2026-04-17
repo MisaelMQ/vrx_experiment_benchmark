@@ -1,0 +1,7 @@
+route_name,stage,timestamp,path
+route_curves.yaml,stage2,20260416_130855,/home/misael/ros2_workspaces/diplomado_ws/src/vrx_experiment_benchmark/metrics/rl_dataset/raw/route_curves.yaml_20260416_130855_dataset.csv
+route_curves.yaml,stage2,20260416_133533,/home/misael/ros2_workspaces/diplomado_ws/src/vrx_experiment_benchmark/metrics/rl_dataset/raw/route_curves.yaml_20260416_133533_dataset.csv
+route_straight.yaml,stage2,20260415_231304,/home/misael/ros2_workspaces/diplomado_ws/src/vrx_experiment_benchmark/metrics/rl_dataset/raw/route_straight.yaml_20260415_231304_dataset.csv
+route_straight.yaml,stage2,20260416_125818,/home/misael/ros2_workspaces/diplomado_ws/src/vrx_experiment_benchmark/metrics/rl_dataset/raw/route_straight.yaml_20260416_125818_dataset.csv
+route_zigzag.yaml,stage2,20260415_230833,/home/misael/ros2_workspaces/diplomado_ws/src/vrx_experiment_benchmark/metrics/rl_dataset/raw/route_zigzag.yaml_20260415_230833_dataset.csv
+route_zigzag.yaml,stage2,20260417_003518,/home/misael/ros2_workspaces/diplomado_ws/src/vrx_experiment_benchmark/metrics/rl_dataset/raw/route_zigzag.yaml_20260417_003518_dataset.csv

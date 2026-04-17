@@ -1,0 +1,5 @@
+metrics_logger:
+  ros__parameters:
+    # Logging configuration
+    flush_rate_hz: 10.0
+    table_print_interval_sec: 5.0
