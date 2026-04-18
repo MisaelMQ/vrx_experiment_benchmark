@@ -1,0 +1,23 @@
+wind_direction_deg: 240
+wind_mean_velocity: 4.0
+var_wind_gain_constants: 3.0
+var_wind_time_constants: 8.0
+random_seed: 10
+wind_update_rate: 10
+
+wave_direction: 0.52
+wave_gain: 0.35
+wave_period: 5.5
+wave_steepness: 0.08
+wave_publish_period: 2.0
+
+fog_density: 0.03
+fog_start: 60.0
+fog_end: 450.0
+fog_r: 0.75
+fog_g: 0.75
+fog_b: 0.75
+
+ambient_r: 0.65
+ambient_g: 0.65
+ambient_b: 0.65
